@@ -1,0 +1,64 @@
+﻿@model ProyectoInventario.Models.Articulo
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Eliminar Artículo</h2>
+
+<h3>¿Estás seguro de querer eliminar este registro?</h3>
+<div>
+    <h4>Articulo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoInventario.descripcion_tipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoInventario.descripcion_tipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descripcion_articulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcion_articulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.existencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.existencia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.costo_unitario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.costo_unitario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estado)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

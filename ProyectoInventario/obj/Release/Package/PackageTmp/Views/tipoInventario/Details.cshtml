@@ -1,0 +1,42 @@
+﻿@model ProyectoInventario.Models.TipoInventario
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalle de tipo de inventario</h2>
+
+<div>
+    <h4>TipoInventario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.descripcion_tipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcion_tipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cuenta_contable)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cuenta_contable)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estado)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_tipo_inventario }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
